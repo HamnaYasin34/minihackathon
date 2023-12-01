@@ -120,7 +120,7 @@ header .menu{
     height: 40px;
     border-radius: 5px;
     font-size: x-large;
-    color: #eee;
+    color: #fff;
     transition: .5s;
 }
 .arrows button:hover{
