@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+
+body {
     font-family: Poppins;
     margin: 0;
     background-color: #010101;
     color: #eee;
 }
-svg{
+
+svg {
     width: 25px;
 }
-header{
+
+header {
     width: 1200px;
     max-width: 90%;
     margin: auto;
@@ -19,15 +22,17 @@ header{
     align-items: center;
     position: relative;
     z-index: 100
-    
 }
-header .logo{
+
+header .logo {
     font-weight: bold;
 }
+
 .menu {
     color: white;
 }
-header .menu{
+
+header .menu {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -36,36 +41,39 @@ header .menu{
     gap: 20px;
     font-weight: 500;
 }
+
 /* css slider */
-.slider{
+.slider {
     height: 100vh;
     margin-top: -50px;
     position: relative;
 }
-.slider .list .item{
+
+.slider .list .item {
     position: absolute;
     inset: 0 0 0 0;
     overflow: hidden;
     opacity: 0;
     transition: .5s;
 }
-.slider .list .item img{
+
+.slider .list .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.slider .list .item::after{
+
+.slider .list .item::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(
-        to top, #000 40%, transparent
-    );
+    background-image: linear-gradient(to top, #000 40%, transparent);
 }
-.slider .list .item .content{
+
+.slider .list .item .content {
     position: absolute;
     left: 10%;
     top: 20%;
@@ -73,46 +81,55 @@ header .menu{
     max-width: 80%;
     z-index: 1;
 }
-.slider .list .item .content p:nth-child(1){
+
+.slider .list .item .content p:nth-child(1) {
     text-transform: uppercase;
     letter-spacing: 10px;
 }
-.slider .list .item .content h2{
+
+.slider .list .item .content h2 {
     font-size: 100px;
     margin: 0;
 }
-.slider .list .item.active{
+
+.slider .list .item.active {
     opacity: 1;
     z-index: 10;
 }
+
 @keyframes showContent {
-    to{
+    to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
 }
+
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3){
+.slider .list .item.active p:nth-child(3) {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
     animation: showContent .5s .7s ease-in-out 1 forwards;
 }
-.slider .list .item.active h2{
+
+.slider .list .item.active h2 {
     animation-delay: 1s;
 }
-.slider .list .item.active p:nth-child(3){
+
+.slider .list .item.active p:nth-child(3) {
     animation-duration: 1.3s;
 }
-.arrows{
+
+.arrows {
     position: absolute;
     top: 30%;
     right: 50px;
     z-index: 100;
 }
-.arrows button{
+
+.arrows button {
     background-color: #eee5;
     border: none;
     font-family: monospace;
@@ -120,14 +137,16 @@ header .menu{
     height: 40px;
     border-radius: 5px;
     font-size: x-large;
-    color: #fff;
+    color: #eee;
     transition: .5s;
 }
-.arrows button:hover{
+
+.arrows button:hover {
     background-color: #000000;
     color: rgb(255, 255, 255);
 }
-.thumbnail{
+
+.thumbnail {
     position: absolute;
     bottom: 50px;
     z-index: 11;
@@ -140,32 +159,39 @@ header .menu{
     overflow: auto;
     justify-content: center;
 }
-.thumbnail::-webkit-scrollbar{
+
+.thumbnail::-webkit-scrollbar {
     width: 0;
 }
-.thumbnail .item{
+
+.thumbnail .item {
     width: 150px;
     height: 220px;
     filter: brightness(.5);
     transition: .5s;
     flex-shrink: 0;
 }
-.thumbnail .item img{
+
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-.thumbnail .item.active{
+
+.thumbnail .item.active {
     filter: brightness(1.5);
 }
-.thumbnail .item .content{
+
+.thumbnail .item .content {
     position: absolute;
     inset: auto 10px 10px 10px;
 }
-.content{
+
+.content {
     color: white;
 }
+
 .nav-link img {
     width: 20px;
     /* height: 10px; */
@@ -179,10 +205,11 @@ header .menu{
 .feature {
     padding-left: 30px;
     padding-right: 30px;
-text-align:center ;
+    text-align: center;
 }
-i{
-color: red;
+
+i {
+    color: red;
 }
 
 .row {
@@ -192,25 +219,67 @@ color: red;
     gap: -10px;
 }
 
+/* ------------cards------ */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card1 img {
+    width: 100%;
+    height: auto;
+}
+
+.card-contentf {
+    padding: 20px;
+}
+
+.card-contentf h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.card-contentf p {
+    margin: 10px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .card1 {
+        margin: 15px 0;
+    }
+}
 
 /********** article **************/
 
 .section-1 {
     padding: 20vmin 0vmin;
-  }
-  
-  .section-1 .row .col-md-6 .pray img {
+    margin-bottom: 10em;
+}
+
+.section-1 .row .col-md-6 .pray img {
     opacity: 0.8;
     width: 80%;
     border-radius: 0.2em;
-   /* mix-blend-mode: darken; */
-  }
-  
-  .section-1 .row .col-md-6:last-child {
+    /* mix-blend-mode: darken; */
+}
+
+.section-1 .row .col-md-6:last-child {
     position: relative;
-  }
-  
-  .section-1 .row .col-md-6 .panel {
+}
+
+.section-1 .row .col-md-6 .panel {
     position: absolute;
     top: 7vmin;
     left: -18vmin;
@@ -221,18 +290,19 @@ color: red;
     box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
     font-family: var(--Rubik);
     z-index: 1;
-  }
-  
-  .section-1 .row .col-md-6 .panel h1 {
+}
+
+.section-1 .row .col-md-6 .panel h1 {
     font-weight: bold;
     padding: 0.4em 0;
     font-size: 2em;
-  }
-  
-  .section-1 .row .col-md-6 .panel p {
+}
+
+.section-1 .row .col-md-6 .panel p {
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.5);
-  }
+}
+
 /* form */
 
 body {
@@ -240,11 +310,11 @@ body {
 }
 
 .form {
-    margin-top: 20px;
+    margin-top: 15em;
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     color: orangered;
 }
 
@@ -258,7 +328,9 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -288,12 +360,82 @@ textarea {
 
 
 
+/* --------our stafff--------- */
+.card-holder {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20rem;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card__name {
+    font-size: 1.7em;
+}
+
+.card__img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card-contents {
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+}
+
+.card__read-more {
+    display: block;
+    opacity: 0;
+    height: 0;
+    transition: all 0.5s;
+}
+
+.card__read-more--open {
+    display: block;
+    opacity: 1;
+    height: 5rem;
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: white;
+    background-color: #000000;
+    padding: 0.6rem 1.5rem;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    background-color: #292424;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
 
 
 
 
-
-
+/* ------form media query----- */
 
 
 
@@ -315,32 +457,32 @@ textarea {
     background: black;
     padding: 1em 2em;
     margin-top: 5%;
-  }
-  
-  .footer .box-container .box h3 {
+}
+
+.footer .box-container .box h3 {
     font-size: 2em;
     color: white;
     padding: 1rem 0;
-  }
-  
-  .footer .box-container .box a {
+}
+
+.footer .box-container .box a {
     display: block;
     font-size: 1em;
     color: white;
     padding: 1rem 0;
     font-weight: lighter;
-  }
-  
-  .footer .box-container .box a i {
+}
+
+.footer .box-container .box a i {
     padding-right: 0.5rem;
     color: rgb(245, 111, 2);
-  }
-  
-  .footer .box-container .box a:hover i {
+}
+
+.footer .box-container .box a:hover i {
     padding-right: 2rem;
-  }
-  
-  .footer .credit {
+}
+
+.footer .credit {
     padding: 1rem;
     padding-top: 2rem;
     margin-top: 2rem;
@@ -349,13 +491,13 @@ textarea {
     color: white;
     border-top: 0.1rem solid rgba(0, 0, 0, 1);
     background-color: black;
-  }
-  
-  .footer .credit span {
-    color: rgb(62, 181, 62);
-  }
+}
 
- 
+.footer .credit span {
+    color: rgb(62, 181, 62);
+}
+
+
 
 
 
@@ -377,24 +519,29 @@ textarea {
 
 
 @media screen and (max-width: 678px) {
-    .thumbnail{
+    .thumbnail {
         justify-content: start;
     }
-    .slider .list .item .content h2{
+
+    .slider .list .item .content h2 {
         font-size: 60px;
     }
-    .arrows{
+
+    .arrows {
         top: 10%;
     }
+
     .card2 {
         padding-left: 40px;
         margin-bottom: 1.5rem;
     }
+
     .form {
         margin-top: 35em;
         width: 100%;
         padding: 10px;
     }
+
     /* footer */
     .footer .box-container {
         display: grid;
@@ -405,32 +552,32 @@ textarea {
         background: black;
         padding: 1em 2em;
         margin-top: 5%;
-      }
-      
-      .footer .box-container .box h3 {
+    }
+
+    .footer .box-container .box h3 {
         font-size: 2em;
         color: white;
         padding: 1rem 0;
-      }
-      
-      .footer .box-container .box a {
+    }
+
+    .footer .box-container .box a {
         display: block;
         font-size: 1em;
         color: white;
         padding: 1rem 0;
         font-weight: lighter;
-      }
-      
-      .footer .box-container .box a i {
+    }
+
+    .footer .box-container .box a i {
         padding-right: 0.5rem;
         color: rgb(255, 157, 11);
-      }
-      
-      .footer .box-container .box a:hover i {
+    }
+
+    .footer .box-container .box a:hover i {
         padding-right: 2rem;
-      }
-      
-      .footer .credit {
+    }
+
+    .footer .credit {
         padding: 1rem;
         padding-top: 2rem;
         margin-top: 2rem;
@@ -439,16 +586,13 @@ textarea {
         color: white;
         border-top: 0.1rem solid rgba(0, 0, 0, 1);
         background-color: black;
-      }
-      
-      .footer .credit span {
+    }
+
+    .footer .credit span {
         color: rgb(62, 181, 62);
-      }
-      
-      /* FOOTER ENDS */
-      
-     
+    }
+
+    /* FOOTER ENDS */
+
+
 }
-
-
-
